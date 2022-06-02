@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+</head>
+<body> 
+    <style>
+        #formInsert{
+            display: none;
+        }
+        #formUpdate{
+            display: none;
+        }
+    </style>
+    <div id="ourProducts">all:
+        <div id="ooo"></div>
+    </div>
+    <form>
+        <!-- onclick="hello()" -->
+        <div id="addProduct">addProduct</div>
+        <!-- <div id="edit">edit</div> -->
+        <!-- <div id="show">show</div><br> -->
+        
+        <label>search:</label>
+        <input id="inputSearchName" type="text"></input>
+        <div id="searchByName">searchName</div><br>
+
+        <label>search of price:</label>
+        <input id="inputSearchPrice" type="number"></input>
+        <input id="inputSearchPrice2" type="number"></input>
+        <div id="searchByPrice">searchByPrice</div><br>
+        
+        <div id="searchByOutOfStock">searchByOutOfStock</div><br>
+        <div id="searchByAlsoOutOfStock">searchByAlsoOutOfStock</div><br>
+        <input id="inputSearchByAlsoOutOfStock" type="number"></input>
+
+        <div id="searchByCategory">searchByCategory</div><br>
+        <select name="categorySearch" id="categorySearch">
+            <option value="shoes">shoes</option>
+            <option value="drink">drink</option>
+            <option value="toys">toys</option>
+            <option value="food">food</option>
+          </select>
+        <div id="resultSearch"></div>
+    </form>
+    <form id="formInsert">
+        <label>name:</label>
+        <input id="name" type="text"></input><br>
+        <label>category: </label><br>
+        <input type="radio" id="shoes" name="category" value="shoes" >shoes</input>
+        <input type="radio" id="drink" name="category" value="drink">drink</input>
+        <input type="radio" id="toys" name="category" value="toys">toys</input>
+        <input type="radio" id="food" name="category" value="food">food</input>
+        <br>
+        <label>price:</label>
+        <input id="price" type="number"></input><br>
+        <label>quantity: </label>
+        <input id="quantity" type="number"></input><br>
+        <div id="insert">insert</div>
+    </form>
+    <ul id="chooseProductUpdate">
+        
+    </ul>
+    <form id="formUpdate"> 
+        <label>name:</label>
+        <input id="nameUpdate" type="text"></input><br>
+        <label>price:</label>
+        <input id="priceUpdate" type="number"></input><br>
+        <label>quantity: </label>
+        <input id="quantityUpdate" type="number"></input><br>
+        <div id="update">update</div>
+    </form>
+   
+    <script src="store.js"></script>
+    <script src="jquery-3.2.1.js"></script>
+</body>
+</html>

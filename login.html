@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form>
+        <label>userName:</label>
+        <input id="userName" type="text"></input><br>
+        <label>userPassword:</label>
+        <input id="userPassword" type="password"></input><br>
+        <button type="submit" name="welcome">היכנס</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const userName = document.querySelector('#userName');
+        const userPassword = document.querySelector('#userPassword');
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            if(userName.value == 'Dasy' && userPassword.value == '1234')
+            {
+                sessionStorage.setItem('currentUser',0);
+            }else{
+                sessionStorage.setItem('currentUser',1);
+            }
+            location.href="/index.html";
+        }
+    </script>
+</body>
+</html>
